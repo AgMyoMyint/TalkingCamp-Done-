@@ -1,0 +1,190 @@
+body {
+
+  background : #f4f4f4;
+  font-size:15px;
+}
+
+a{
+  color : #4c5b69;
+}
+
+ul{
+  list-style: none;
+  margin : 0;
+  padding : 0;
+}
+
+hr{
+  margin : 10px 0 15px 0;
+}
+
+h3{
+  margin-bottom: 5px;
+}
+
+
+
+/*Navbar customization */
+.navbar{
+  background : #1A237E;
+  margin-bottom : 30px;
+  border : 0;
+
+}
+.navbar-nav > li > a{
+  line-height: 32px !important;
+}
+
+nav.navbar.navbar-inverse{
+  border-radius : 0px;
+}
+
+.navbar-brand{
+  font-family: "Century Gothic";
+  font-weight: bolder;
+
+  font-size: larger;
+}
+
+.navbar-inverse .navbar-nav > li > a ,.navbar-inverse , navbar-brand{
+  color : #FFF !important;
+}
+
+.navbar-inverse a:hover, .navbar li.active a {
+  background : none !important;
+
+}
+
+.navbar-header > a.navbar-brand{
+  padding : 10px;
+  color : #fff ;
+  text-decoration: none;
+}
+
+.navbar-nav > li > a {
+  padding : 10px 10px 0 10px;
+}
+
+
+span.ico{
+  font-size: x-large;
+  font-family: "Wingdings 3";
+  color: #FFF;
+}
+
+
+.block{
+  background : #fff;
+  border-raidus : 5px;
+  padding : 15px 20px;
+  margin-bottom : 20px;
+
+
+}
+
+.main-col{
+  overflow: auto;
+}
+
+.main-col h1{
+  font-size : 22px;
+  margin : 5px 0 0 0 ;
+  padding : 0 ;
+}
+
+
+.main-col h4{
+  font-size : 16px;
+  margin : 5px 0 0 0 ;
+  padding : 0 ;
+  color : #aaa;
+}
+
+.sidebar .block h3{
+  margin : 0  0 10px 0;
+  padding-bottom : 10px;
+  border-bottom : #eee solid 1px;
+}
+
+
+
+.topic{
+  border-bottom  : #eee solid 1px;
+  margin-bottom : 10px;
+  padding : 10px;
+}
+.topic-content{
+  width: 100%;
+}
+
+img.avatar{
+  width: 100%;
+}
+
+
+
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.center{
+  display: flex;
+  justify-content: center !important;
+  height: 100%;
+  align-items: center;
+}
+
+.hot{
+  background: #ff2f2e;
+  color: white;
+  border:1px solid #ff2f2e;
+  font-size: medium;
+  border-radius: 3px;
+  padding:2px 5px;
+}
+
+.form-control {
+  height: auto;
+}
+
+
+a.list-group-item.active, a.list-group-item.active:hover , a.list-group-item.active:focus{
+  background: #3F51B5;
+  border-raidus : 0;
+}
+
+.list-group-item{
+  border : 0;
+}
+
+input.btn.btn-primary{
+  background: #3F51B5;
+}
+#main-topic{
+  background : #f4f4f4;
+  padding : 10px;
+
+}
+
+.user-info{
+  border:#eee solid 1px;
+  background: #eee;
+  padding : 5px ;
+  overflow : hidden;
+  font-szie : 13px;
+}
+
+.user-info img{
+  display : block;
+  margin-bottom : 5px;
+
+}
+.user-info li{
+  list-style: none;
+  margin: 10px 0 0 5px;
+
+}
+.user-info li{
+  line-height : 1.6em;
+}
