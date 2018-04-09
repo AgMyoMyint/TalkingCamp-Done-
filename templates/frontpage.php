@@ -17,21 +17,23 @@
                 <div class="row ">
                     <div class="col-md-2 ">
                         <div class="">
-                            <img class="avatar pull-left" src="gravatar.png" />
+                            <div class="user-info">
+                                <img class="avatar pull-left" src="gravatar.png" />
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-10 ">
                         <div class="topic-content ">
                             <h3 class=" pull-right">
-                                <a href="topic.html">
+                                <a href="topic.php">
                                     How did you learn CSS and HTML?
                                 </a>
 
                             </h3>
                             <div class="topic-info pull-right">
-                                <a href="category.html">Development</a> >>
-                                <a href="profile.html">BradT81</a>  >>
-                                <a href="profile.html">Posted on June 20, 2014, 9:40 AM </a>
+                                <a href="category.php">Development</a> >>
+                                <a href="profile.php">BradT81</a>  >>
+                                <a href="profile.php">Posted on June 20, 2014, 9:40 AM </a>
                                 <span class="badge">3</span>
                             </div>
                         </div>
@@ -49,14 +51,14 @@
                     <div class="col-md-10 ">
                         <div class="topic-content ">
                             <h3 class=" pull-right">
-                                <a href="topic.html">
+                                <a href="topic.php">
                                     Best Web Application Frameworks
                                 </a>
                             </h3>
                             <div class="topic-info pull-right">
-                                <a href="category.html">Development</a> >>
-                                <a href="profile.html">BradT81</a>  >>
-                                <a href="profile.html">Posted on June 20, 2014, 9:40 AM </a>
+                                <a href="category.php">Development</a> >>
+                                <a href="profile.php">BradT81</a>  >>
+                                <a href="profile.php">Posted on June 20, 2014, 9:40 AM </a>
 
                                 <span class="badge ">3</span>
                             </div>
@@ -69,19 +71,21 @@
             <li class="topic">
                 <div class="row">
                     <div class="col-md-2 ">
-                        <img class="avatar pull-left" src="gravatar.png" />
+                        <div class="user-info">
+                            <img class="avatar pull-left" src="gravatar.png" />
+                        </div>
                     </div>
                     <div class="col-md-10 ">
                         <div class="topic-content">
                             <h3 class=" pull-right">
-                                <a href="topic.html">
+                                <a href="topic.php">
                                     Best Web Application Frameworks
                                 </a>
                             </h3>
                             <div class="topic-info  pull-right">
-                                <a href="category.html">Development</a> >>
-                                <a href="profile.html">BradT81</a>  >>
-                                <a href="profile.html">Posted on June 20, 2014, 9:40 AM </a>
+                                <a href="category.php">Development</a> >>
+                                <a href="profile.php">BradT81</a>  >>
+                                <a href="profile.php">Posted on June 20, 2014, 9:40 AM </a>
                                 <span class="badge">3</span>
                             </div>
                         </div>

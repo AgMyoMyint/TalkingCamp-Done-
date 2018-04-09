@@ -17,7 +17,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    
+
     <script src="templates/js/bootstrap.js"></script>
     <script src="templates/js/ckeditor/ckeditor.js"></script>
 
@@ -31,7 +31,7 @@
     <div class="container">
 
         <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">  <span class="ico glyphicon glyphicon-tent"></span> TALKING CAMP</a>
+            <a class="navbar-brand" href="index.php">  <span class="ico glyphicon glyphicon-tent"></span> TALKING CAMP</a>
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only"> Toggle Navigation </span>
                 <span class="icon-bar">  </span>

@@ -26,14 +26,18 @@ h3{
 
 /*Navbar customization */
 .navbar{
-  background : #283593;
+  background : #212121;
   margin-bottom : 30px;
   border : 0;
 
 }
 .navbar-nav > li > a{
   line-height: 32px !important;
+
 }
+
+
+
 
 nav.navbar.navbar-inverse{
   border-radius : 0px;
@@ -48,7 +52,21 @@ nav.navbar.navbar-inverse{
 
 .navbar-inverse .navbar-nav > li > a ,.navbar-inverse , navbar-brand{
   color : #FFF !important;
+
 }
+.navbar-inverse .navbar-nav > li > a:focus,.navbar-inverse .navbar-nav > li > a:hover {
+    color: #FFF !important;
+
+    height: 50px;
+    background: #269f42 !important;
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+    color: #FFF !important;
+
+    height: 50px;
+    background: #269f42 !important;
+}
+
 
 .navbar-inverse a:hover, .navbar li.active a {
   background : none !important;
@@ -165,8 +183,11 @@ img.avatar{
 
 
 a.list-group-item.active, a.list-group-item.active:hover , a.list-group-item.active:focus{
-  background: #3F51B5;
+  background: #269f42;
   border-raidus : 0;
+}
+a.list-group-item.active > span.badge{
+    color: #269f42;
 }
 
 .list-group-item{
@@ -174,14 +195,19 @@ a.list-group-item.active, a.list-group-item.active:hover , a.list-group-item.act
 }
 
 input.btn.btn-primary{
-  background: #3F51B5;
+  background: #269f42;
+    border-color : #269f42;
+}
+input.btn.btn-primary:hover,input.btn.btn-primary:focus{
+    background: #218838;
+    border-color : #218838;
 }
 
 .badge{
-    background: #5673ff;
+    background: #404040;
 }
 #main-topic{
-  background : #f4f4f4;
+  background : #269f42;
   padding : 10px;
 
 }
