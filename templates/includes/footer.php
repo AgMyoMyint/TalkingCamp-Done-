@@ -19,7 +19,7 @@
                 </div>
 
                 <input type="submit" name="do_login" class="btn btn-primary" value="Login">
-                <a href="register.html" class="btn btn-default" >Create Account</a>
+                <a href="register.php" class="btn btn-default" >Create Account</a>
             </form>
 
         </div>
@@ -27,13 +27,26 @@
         <div class="block">
             <h3> Categories </h3>
             <div class="list-group">
-                <a href="#" class="list-group-item active"> All Topics <span class="badge pull-right">14</span> </a>
-                <a href="#" class="list-group-item "> Design  <span class="badge pull-right">4</span> </a>
-                <a href="#" class="list-group-item "> Development  <span class="badge pull-right">9</span> </a>
-                <a href="#" class="list-group-item "> Business & Marketing  <span class="badge pull-right">12</span> </a>
-                <a href="#" class="list-group-item "> Search Engines  <span class="badge pull-right">12</span> </a>
-                <a href="#" class="list-group-item "> Cloud and Hosting  <span class="badge pull-right">7</span> </a>
-                <a href="#" class="list-group-item "> All  <span class="badge pull-right">3</span> </a>
+
+
+                <a href="topics.php" class="list-group-item <?php echo is_active(""); ?>">
+                    All Topics
+                    <span class="badge pull-right">
+                            <?php echo getTotalCategories(); ?>
+                        </span>
+                </a>
+
+                <?php foreach(getCategories() as $category) : ?>
+
+                    <a href="topics.php?category=<?php echo $category["id"]; ?>" class="list-group-item <?php echo is_active($category['id']); ?>"  >
+                        <?php echo $category["name"]; ?>
+                        <span class="badge pull-right">
+                            <?php echo getTotalTopics_count($category["id"]); ?>
+                        </span>
+                    </a>
+                <?php endforeach; ?>
+
+
 
             </div>
         </div>
