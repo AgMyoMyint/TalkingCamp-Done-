@@ -42,3 +42,20 @@ function getCategories(){
 
     return $db->rowCount();
 }
+
+function userPostCount($id){
+    $db = new Database();
+    $db->query("SELECT * from topics where user_id = :id");
+    $db->bind(":id",$id);
+    //Assign Result Set
+    $results = $db->resultset();
+    $topic_count = $db->rowCount();
+
+    $db->query("SELECT * from replies where user_id = :id");
+    $db->bind(":id",$id);
+    //Assign Result Set
+    $results = $db->resultset();
+    $replies_count = $db->rowCount();
+
+    return ($topic_count+$replies_count);
+}

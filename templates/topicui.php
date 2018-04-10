@@ -5,7 +5,7 @@
 
     <div class="block">
         <h2 class="pull-left">
-            How did you learn CSS and HTML?
+            <?php echo $topic_['title']; ?>
         </h2>
         <h4 class="pull-right">
             A simple PHP Forum Engine
@@ -18,134 +18,48 @@
             <li class="topic">
                 <div class="row user-info">
                     <div class="col-md-2 ">
-                        <div class="">
-                            <img class="avatar pull-left" src="gravatar.png" />
+                        <div class="topic-info">
+
+                            <img class="avatar pull-left" src="images/avatars/<?php echo $topic_['avatar']; ?>" />
+                            <ul>
+                                <li> <strong><?php echo $topic_['username']; ?>   </strong></li>
+                                <li>  <?php echo userPostCount($topic_['user_id']); ?> posts </li>
+                                <li>  <a href="topics.php?user=<?php echo $topic_['user_id']; ?>" > View Topics </a> </li>
+                            </ul>
+
                         </div>
                     </div>
                     <div class="col-md-10 ">
                         <div class="topic-content ">
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
+                            <?php echo $topic_['body']; ?>
                         </div>
                     </div>
                 </div>
             </li>
 
-            <li class="topic">
-                <div class="row user-info">
-                    <div class="col-md-2 ">
-                        <div class="">
-                            <img class="avatar pull-left" src="gravatar.png" />
-                        </div>
-                    </div>
-                    <div class="col-md-10 ">
-                        <div class="topic-content ">
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                        </div>
-                    </div>
-                </div>
-            </li>
 
-            <li class="topic">
-                <div class="row user-info">
-                    <div class="col-md-2 ">
-                        <div class="">
-                            <img class="avatar pull-left" src="gravatar.png" />
+            <?php foreach ($topics as $topic) : ?>
+                <li class="topic">
+                    <div class="row user-info">
+                        <div class="col-md-2 ">
+                            <div class="topic-info">
+                                <img class="avatar pull-left" src="images/avatars/<?php echo $topic['avatar']; ?>" />
+                                <ul>
+                                    <li> <strong><?php echo $topic['username']; ?>   </strong></li>
+                                    <li>  <?php echo userPostCount($topic['user_id']); ?> posts </li>
+                                    <li>  <a href="topics.php?user=<?php echo $topic['user_id']; ?>" > View Topics </a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-10 ">
+                            <div class="topic-content ">
+                                <?php echo $topic['body']; ?>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-10 ">
-                        <div class="topic-content ">
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                        </div>
-                    </div>
-                </div>
-            </li>
+                </li>
+            <?php endforeach; ?>
 
-            <li class="topic">
-                <div class="row user-info">
-                    <div class="col-md-2 ">
-                        <div class="">
-                            <img class="avatar pull-left" src="gravatar.png" />
-                        </div>
-                    </div>
-                    <div class="col-md-10 ">
-                        <div class="topic-content ">
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li class="topic">
-                <div class="row user-info">
-                    <div class="col-md-2 ">
-                        <div class="">
-                            <img class="avatar pull-left" src="gravatar.png" />
-                        </div>
-                    </div>
-                    <div class="col-md-10 ">
-                        <div class="topic-content ">
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li class="topic">
-                <div class="row user-info">
-                    <div class="col-md-2 ">
-                        <div class="">
-                            <img class="avatar pull-left" src="gravatar.png" />
-                        </div>
-                    </div>
-                    <div class="col-md-10 ">
-                        <div class="topic-content ">
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?How did you learn CSS and HTML?
-                            How did you learn CSS and HTML?How did you learn CSS and HTML?
-                        </div>
-                    </div>
-                </div>
-            </li>
 
         </ul>
 
@@ -155,8 +69,8 @@
 
         <ul>
             <li>Total Number of Users : <strong>52</strong></li>
-            <li>Total Number of Topics : <strong>10</strong></li>
-            <li>Total Number of Categories : <strong>5</strong></li>
+            <li>Total Number of Topics : <strong><?php echo $totalTopics;?></strong></li>
+            <li>Total Number of Categories : <strong><?php echo $totalCategories;?></strong></li>
         </ul>
     </div>
 </div>

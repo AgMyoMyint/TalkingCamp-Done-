@@ -24,7 +24,7 @@ class Topic{
                             INNER JOIN category
                                 ON topics.category_id = category.id
                             ORDER BY create_date DESC"
-                        );
+        );
 
         //Assign Result Set
         $results = $this->db->resultset();
@@ -65,6 +65,48 @@ class Topic{
         $this->db->bind(":id",$id);
         //Assign Result Set
         $results = $this->db->resultset();
+
+        return $results;
+    }
+    function getAll_Topics_by_user_id($id){
+
+        $this->db->query("SELECT topics.*,users.username,users.avatar, category.name
+                            FROM topics
+                            INNER JOIN users
+                                ON topics.user_id = users.id
+                            INNER JOIN category
+                                ON topics.category_id = category.id where user_id = :id ORDER BY create_date DESC");
+        $this->db->bind(":id",$id);
+        //Assign Result Set
+        $results = $this->db->resultset();
+
+        return $results;
+    }
+    function get_Topics_by_id($id){
+
+        $this->db->query("SELECT users.username,users.avatar, replies.*
+                            FROM replies
+                            INNER JOIN users
+                                ON replies.user_id = users.id
+                            INNER JOIN topics 
+                                ON topics.id = replies.topic_id where replies.topic_id = :id ");
+        $this->db->bind(":id",$id);
+        //Assign Result Set
+        $results = $this->db->resultset();
+
+        return $results;
+    }
+    function get_Topic_by_id($id){
+
+        $this->db->query("SELECT topics.*,users.username,users.avatar, category.name
+                            FROM topics
+                            INNER JOIN users
+                                ON topics.user_id = users.id
+                            INNER JOIN category
+                                ON topics.category_id = category.id where topics.id = :id ");
+        $this->db->bind(":id",$id);
+        //Assign Result Set
+        $results = $this->db->single();
 
         return $results;
     }

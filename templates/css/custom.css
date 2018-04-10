@@ -133,6 +133,8 @@ span.ico{
 }
 .topic-content{
   width: 100%;
+  padding-top : 10px;
+  padding-bottom :10px ;
 
 }
 .topic-content>h3{
@@ -145,10 +147,20 @@ span.ico{
 
 }
 .topic-info>span{
-  margin: 5px;
-  padding : 5px;
+    margin : 5px;
+    padding : 5px;
+}
+.topic-info>li>{
+    font-size: x-small;
 
 }
+.topic-info{
+    padding:  5px;
+    border: 1px solid #e3e3e3;
+    background:  #e3e3e3;
+}
+
+
 
 img.avatar{
   width: 100%;

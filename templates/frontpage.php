@@ -29,14 +29,16 @@
                                 <div class="col-md-10 ">
                                     <div class="topic-content ">
                                         <h3 class=" pull-right">
-                                            <a href="topic.php">
+                                            <a href="topic.php?id=<?php echo $topic['id']; ?>">
                                                 <?php echo $topic['title']; ?>
                                             </a>
 
                                         </h3>
                                         <div class="topic-info pull-right">
-                                            <a href="category.php"><?php echo $topic['name']; ?></a> >>
-                                            <a href="profile.php"><?php echo $topic['username']; ?></a>  >>
+                                            <a href="category.php?category=<?php echo $topic['category_id']; ?>"><?php echo $topic['name']; ?></a>
+                                            >>
+                                            <a href="profile.php"><?php echo $topic['username']; ?></a>
+                                            >>
                                             <a href="profile.php">Posted on <?php echo formatDate($topic['create_date']); ?> </a>
                                             <span class="badge"><?php echo replyCount($topic['id']);?></span>
                                         </div>
