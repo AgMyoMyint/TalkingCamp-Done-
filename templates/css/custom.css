@@ -155,15 +155,18 @@ span.ico{
 
 }
 .topic-info{
-    padding:  5px;
+    margin : 0;
     border: 1px solid #e3e3e3;
-    background:  #e3e3e3;
+    background:  #e4e4e4;
+    border-radius : 5px;
 }
 
 
 
 img.avatar{
   width: 100%;
+    padding : 5px;
+    border-radius : 5px;
 }
 
 
@@ -230,9 +233,12 @@ input.btn.btn-primary:hover,input.btn.btn-primary:focus{
   padding : 5px ;
   overflow : hidden;
   font-szie : 13px;
+
+    align-items: center;
+    border-radius : 5px;
 }
 
-.user-info img{
+.user-info  img{
   display : block;
   margin-bottom : 5px;
 
@@ -240,8 +246,8 @@ input.btn.btn-primary:hover,input.btn.btn-primary:focus{
 .user-info li{
   list-style: none;
   margin: 10px 0 0 5px;
-
 }
-.user-info li{
-  line-height : 1.6em;
+.user-info  li  a{
+    font-size:small;
+
 }

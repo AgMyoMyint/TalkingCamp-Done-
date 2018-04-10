@@ -17,12 +17,12 @@
 
             <li class="topic">
                 <div class="row user-info">
-                    <div class="col-md-2 ">
-                        <div class="topic-info">
+                    <div class="col-md-2 topic-info ">
+                        <div class="">
 
                             <img class="avatar pull-left" src="images/avatars/<?php echo $topic_['avatar']; ?>" />
-                            <ul>
-                                <li> <strong><?php echo $topic_['username']; ?>   </strong></li>
+                            <ul class="text-center">
+                                <li > <strong><?php echo $topic_['username']; ?>   </strong></li>
                                 <li>  <?php echo userPostCount($topic_['user_id']); ?> posts </li>
                                 <li>  <a href="topics.php?user=<?php echo $topic_['user_id']; ?>" > View Topics </a> </li>
                             </ul>
@@ -41,11 +41,11 @@
             <?php foreach ($topics as $topic) : ?>
                 <li class="topic">
                     <div class="row user-info">
-                        <div class="col-md-2 ">
-                            <div class="topic-info">
+                        <div class="col-md-2 topic-info ">
+                            <div class="">
                                 <img class="avatar pull-left" src="images/avatars/<?php echo $topic['avatar']; ?>" />
-                                <ul>
-                                    <li> <strong><?php echo $topic['username']; ?>   </strong></li>
+                                <ul class="text-center">
+                                    <li > <strong ><?php echo $topic['username']; ?>   </strong></li>
                                     <li>  <?php echo userPostCount($topic['user_id']); ?> posts </li>
                                     <li>  <a href="topics.php?user=<?php echo $topic['user_id']; ?>" > View Topics </a> </li>
                                 </ul>
