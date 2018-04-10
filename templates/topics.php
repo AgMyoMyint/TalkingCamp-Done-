@@ -20,7 +20,7 @@
                         <div class="row user-info">
                             <div class="col-md-2 ">
                                 <div class="">
-                                 <!--   <img class="avatar pull-left" src="images/avatars/<?php //echo topic['avatar']; ?>" /> -->
+                                    <img class="avatar pull-left" src="images/avatars/<?php echo $topic['avatar']; ?>" />
                                 </div>
                             </div>
                             <div class="col-md-10 ">
@@ -32,7 +32,7 @@
                                         </a>
 
                                     </h3>
-                                    <div class="topic-info pull-right">
+                                    <div class=" pull-right">
                                         <a href="category.php"><?php echo $topic['name']; ?></a> >>
                                         <a href="profile.php"><?php echo $topic['username']; ?></a>  >>
                                         <a href="profile.php">Posted on <?php echo formatDate($topic['create_date']); ?> </a>

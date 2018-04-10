@@ -1,6 +1,7 @@
 <?php
 
 class Topic{
+
     //initialize DB Variable
     private $db;
 
@@ -82,6 +83,23 @@ class Topic{
 
         return $results;
     }
+    function getAll_TopicsReplies_by_user_id($id){
+
+        $this->db->query("SELECT topics.*,users.username,users.avatar, category.name, replies.*
+                            FROM topics
+                            INNER JOIN users
+                                ON topics.user_id = users.id
+                            INNER JOIN category
+                                ON topics.category_id = category.id 
+                                INNER JOIN replies
+                                ON topics.id = replies.topic_id
+                                where user_id = :id ORDER BY replies.create_date DESC");
+        $this->db->bind(":id",$id);
+        //Assign Result Set
+        $results = $this->db->resultset();
+
+        return $results;
+    }
     function get_Topics_by_id($id){
 
         $this->db->query("SELECT users.username,users.avatar, replies.*
@@ -89,7 +107,9 @@ class Topic{
                             INNER JOIN users
                                 ON replies.user_id = users.id
                             INNER JOIN topics 
-                                ON topics.id = replies.topic_id where replies.topic_id = :id ");
+                                ON topics.id = replies.topic_id 
+                                where replies.topic_id = :id 
+                                ORDER BY replies.create_date ASC");
         $this->db->bind(":id",$id);
         //Assign Result Set
         $results = $this->db->resultset();

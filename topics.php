@@ -9,7 +9,9 @@ if(isset($_GET['category'])) {
     $template->topics =$topic->getAll_Topics_by_category_id($_GET['category']);
 
 }else if(isset($_GET['user_id'])){
-    $template->topics =$topic->getAll_Topics_by_user_id($_GET['user_id']);
+    $template->topics =$topic->getAll_TopicsReplies_by_user_id($_GET['user_id']);
+}else if(isset($_GET['user'])){
+    $template->topics =$topic->getAll_Topics_by_user_id($_GET['user']);
 }else{
     $template->topics = $topic->getAll_Topics();
 }

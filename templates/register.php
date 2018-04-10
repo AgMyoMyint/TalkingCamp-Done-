@@ -11,8 +11,15 @@
         </h4>
         <div class="clearfix"></div>
         <hr>
+
         <form action="register.php" enctype="multipart/form-data" method="post">
+
             <div class="form-group">
+                <?php displayMessage(); ?>
+            </div>
+            <div class="form-group">
+
+
                 <label> Enter Name*</label>
                 <input name="name"  type="text" class="form-control" placeholder="Enter Name ">
             </div>
