@@ -62,16 +62,27 @@
 
 
         </ul>
+        <?php displayMessage(); ?>
+        <?php if(isLoggedIn()) : ?>
+            <form method="post" action="topic.php">
 
-        <h3>
-            Forum Statistics
-        </h3>
 
-        <ul>
-            <li>Total Number of Users : <strong>52</strong></li>
-            <li>Total Number of Topics : <strong><?php echo $totalTopics;?></strong></li>
-            <li>Total Number of Categories : <strong><?php echo $totalCategories;?></strong></li>
-        </ul>
+                <div class="form-group">
+                    <label>Reply</label>
+                    <textarea id="about" name="body"  rows="6"  class="form-control" placeholder="Enter About Yourself (Optional) "> </textarea>
+                    <script >CKEDITOR.replace('about');</script>
+                </div>
+
+                <input type="hidden" value="<?php echo $topic_['id'];  ?>" name="topic_id">
+
+                <div class="form-group " >
+                    <input name="submit" type="submit" class="btn btn-primary " value="Reply">
+                </div>
+
+            </form>
+        <?php endif;  ?>
+
+
     </div>
 </div>
 

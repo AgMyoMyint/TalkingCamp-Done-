@@ -20,6 +20,15 @@ function getCategories(){
     return $results;
 }
 
+ function getTotalTopicsCount(){
+    $db = new Database();
+    $db->query("SELECT * from topics");
+
+    //Assign Result Set
+    $results =$db->resultset();
+
+    return $db->rowCount();
+}
 /*
 * Get All Topics
 */

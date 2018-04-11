@@ -2,6 +2,7 @@
 require('core/ini.php');
 
 $topic = new Topic;
+$user = new User;
 $template = new Template('templates/topics.php');
 if(isset($_GET['category'])) {
 
@@ -20,7 +21,7 @@ if(isset($_GET['category'])) {
 
 
 $template->heading = " This is front page ";
-
+$template->totalUsers = $user->getTotalUsers();
 $template->totalCategories = $topic->getTotalCategories();
 $template->totalTopics = $topic->getTotalTopics();
 echo $template;

@@ -28,14 +28,14 @@
                                 </div>
                                 <div class="col-md-10 ">
                                     <div class="topic-content ">
-                                        <h3 class=" pull-right">
+                                        <h3 class="">
                                             <a href="topic.php?id=<?php echo $topic['id']; ?>">
                                                 <?php echo $topic['title']; ?>
                                             </a>
 
                                         </h3>
-                                        <div class=" pull-right">
-                                            <a href="category.php?category=<?php echo $topic['category_id']; ?>"><?php echo $topic['name']; ?></a>
+                                        <div class="">
+                                            <a href="topics.php?category=<?php echo $topic['category_id']; ?>"><?php echo $topic['name']; ?></a>
                                             >>
                                             <a href="topics.php?user=<?php  echo $topic['user_id']; ?>"><?php echo $topic['username']; ?></a>
                                             >>
@@ -59,7 +59,7 @@
             </h3>
 
             <ul>
-                <li>Total Number of Users : <strong>52</strong></li>
+                <li>Total Number of Users : <strong><?php echo $totalUsers;?></strong></li>
                 <li>Total Number of Topics : <strong><?php echo $totalTopics;?></strong></li>
                 <li>Total Number of Categories : <strong><?php echo $totalCategories;?></strong></li>
             </ul>

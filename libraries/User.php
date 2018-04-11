@@ -27,6 +27,23 @@ class User{
         }
 
     }
+    public function login($username, $password){
+        $this->db->query(
+            'SELECT * from users where username = :username AND password = :password'
+        );
+
+        $this->db->bind(":username",$username);
+        $this->db->bind(":password",$password);
+
+        $row = $this->db->single();
+
+        if($this->db->rowCount()>0){
+            $this->setUserData($row);
+            return true;
+        }else{
+            return false;
+        }
+    }
 
     public function uploadAvatar(){
 
@@ -61,5 +78,28 @@ class User{
         }
 
 
+    }
+
+
+    private function setUserData($row){
+        $_SESSION['is_logged_in'] = true;
+        $_SESSION['user_id']=$row['id'];
+        $_SESSION['username']=$row['username'];
+        $_SESSION['name'] = $row['name'];
+    }
+
+    public function logout(){
+        unset($_SESSION['is_logged_in']);
+        unset($_SESSION['user_id']);
+        unset($_SESSION['username']);
+        unset($_SESSION['name']);
+        return true;
+    }
+
+    public function getTotalUsers(){
+        $this->db->query("Select * from users");
+        $results = $this->db->resultset();
+
+        return $this->db->rowCount();
     }
 }

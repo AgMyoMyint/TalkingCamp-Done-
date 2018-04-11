@@ -43,3 +43,19 @@ function displayMessage(){
         echo  '';
     }
 }
+
+function isLoggedIn(){
+    if(isset($_SESSION['is_logged_in'])){
+        return true;
+    }else{
+        return false;
+    }
+}
+function getUser(){
+    $userArray = array();
+    $userArray['user_id'] = $_SESSION['user_id'];
+    $userArray['username'] = $_SESSION['username'];
+    $userArray['name'] = $_SESSION['name'];
+    return $userArray;
+}
+

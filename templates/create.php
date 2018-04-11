@@ -4,7 +4,7 @@
 
         <div class="block">
             <h2 class="pull-left">
-                Create An Account
+                Create A Topic
             </h2>
             <h4 class="pull-right">
                 A simple php engine forum
@@ -12,6 +12,7 @@
             <div class="clearfix"></div>
             <hr>
             <form action="create.php" enctype="multipart/form-data" method="post">
+                <?php displayMessage(); ?>
                 <div class="form-group">
                     <label> Topic Title</label>
                     <input name="title"  type="text" class="form-control" placeholder="Enter Title ">
@@ -19,15 +20,11 @@
                 <div class="form-group">
                     <label>Category</label>
                     <select name="category"   class="form-control">
-                        <option value="">
-                            New1
-                        </option>
-                        <option value="">
-                            New2
-                        </option>
-                        <option value="">
-                            New3
-                        </option>
+                    <?php foreach(getCategories() as $category) : ?>
+
+                            <option value="<?php echo $category["id"] ;  ?>"> <?php echo $category["name"] ;  ?> </option>
+
+                        <?php endforeach; ?>
                     </select>
                 </div>
                 <div class="form-group">

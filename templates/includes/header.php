@@ -47,12 +47,17 @@
                 <li class="<?php echo ("index.php" ==basename($_SERVER['PHP_SELF']))?  "active" : "" ; ?>">
                     <a class="nav-link" href="index.php">Home </a>
                 </li>
+
+                <?php if(isLoggedIn()) : ?>
+                    <li class="<?php echo ("create.php" ==basename($_SERVER['PHP_SELF']))?  "active" : "" ; ?>">
+                        <a class="nav-link" href="create.php">Create Topic</a>
+                    </li>
+                <?php else : ?>
                 <li class="<?php echo ("register.php" ==basename($_SERVER['PHP_SELF']))?  "active" : "" ; ?>">
                     <a class="nav-link" href="register.php">Create An Account</a>
                 </li>
-                <li class="<?php echo ("create.php" ==basename($_SERVER['PHP_SELF']))?  "active" : "" ; ?>">
-                    <a class="nav-link" href="create.php">Create Topic</a>
-                </li>
+
+                <?php endif; ?>
 
             </ul>
 
